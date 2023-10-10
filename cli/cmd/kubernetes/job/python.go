@@ -69,7 +69,7 @@ func (p *pythonCreator) create(targetPod *apiv1.Pod, cfg *data.FlameConfig) (str
 								cfg.TargetConfig.Pgrep,
 							},
 							SecurityContext: &apiv1.SecurityContext{
-								Privileged: boolPtr(true),
+								Privileged: boolPtr(false),
 								Capabilities: &apiv1.Capabilities{
 									Add: []apiv1.Capability{"SYS_PTRACE"},
 								},
